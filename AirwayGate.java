@@ -16,6 +16,10 @@ public class AirwayGate implements drawable {
         this.currentPlane = null;
     }
 
+    /*
+ * Parks an aircraft at this gate if the gate is open and currently free.
+ * Throws OccupancyException if the gate is closed or already occupied.
+ */
     public void parkPlane(Aircraft plane) throws OccupancyException {
 
         if (!status) {
